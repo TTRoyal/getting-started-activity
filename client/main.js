@@ -6,7 +6,7 @@ import "./style.css";
 // Will eventually store the authenticated user's access_token
 let auth;
 
-const discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
+const discordSdk = new DiscordSDK("1211307898320461905");
 
 
 async function appendVoiceChannelName() {
@@ -45,7 +45,7 @@ async function setupDiscordSdk() {
 
   // Authorize with Discord Client
   const { code } = await discordSdk.commands.authorize({
-    client_id: import.meta.env.VITE_DISCORD_CLIENT_ID,
+    client_id: "1211307898320461905",
     response_type: "code",
     state: "",
     prompt: "none",
