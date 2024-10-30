@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3004',
+        target: 'https://discordauth.retown.workers.dev/',
         changeOrigin: true,
         secure: false,
         ws: true,
