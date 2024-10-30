@@ -10,6 +10,7 @@ const discordSdk = new DiscordSDK({
   client_id: process.env.DISCORD_CLIENT_ID, // Using the client ID from the env bindings
 });
 
+console.log(process.env.DISCORD_CLIENT_ID)
 
 async function appendVoiceChannelName() {
   const app = document.querySelector('#app');
