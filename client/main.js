@@ -8,7 +8,7 @@ let auth;
 
 const discordSdk = new DiscordSDK(import.meta.env.VITE_DISCORD_CLIENT_ID);
 
-console.log(import.meta.env.VITE_DISCORD_CLIENT_ID + " est l'id de l'app.")
+
 async function appendVoiceChannelName() {
   const app = document.querySelector('#app');
 
