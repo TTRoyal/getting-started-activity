@@ -6,9 +6,7 @@ import "./style.css";
 // Will eventually store the authenticated user's access_token
 let auth;
 
-const discordSdk = new DiscordSDK({
-  client_id: process.env.DISCORD_CLIENT_ID, // Using the client ID from the env bindings
-});
+const discordSdk = new DiscordSDK(import.meta.env.DISCORD_CLIENT_ID);
 
 console.log(env.DISCORD_CLIENT_ID)
 
@@ -48,7 +46,7 @@ async function setupDiscordSdk() {
 
   // Authorize with Discord Client
   const { code } = await discordSdk.commands.authorize({
-    client_id: process.env.VITE_DISCORD_CLIENT_ID,
+    client_id: import.meta.env.DISCORD_CLIENT_ID,
     response_type: "code",
     state: "",
     prompt: "none",
