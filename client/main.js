@@ -6,7 +6,9 @@ import "./style.css";
 // Will eventually store the authenticated user's access_token
 let auth;
 
-const discordSdk = new DiscordSDK(process.env.VITE_DISCORD_CLIENT_ID);
+const discordSdk = new DiscordSDK({
+  client_id: process.env.DISCORD_CLIENT_ID, // Using the client ID from the env bindings
+});
 
 
 async function appendVoiceChannelName() {
